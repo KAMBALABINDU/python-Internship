@@ -1,0 +1,13 @@
+#https://www.hackerrank.com/challenges/py-set-discard-remove-pop/problem
+n = int(input())
+s = set(map(int, input().split()))
+for _ in range(int(input())):
+    com = input().split()
+    if com[0] == 'pop':
+        s.pop()
+    elif com[0] == 'remove':
+        s.remove(int(com[1]))
+    elif com[0] == 'discard':
+        s.discard(int(com[1]))
+
+print(sum(s))
